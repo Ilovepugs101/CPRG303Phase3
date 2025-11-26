@@ -33,18 +33,37 @@ export default function Flashcards() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    padding: 16
+    backgroundColor: "#000000"
+  },
+  scroll: {
+    padding: 20
   },
   header: {
-    fontSize: 24,
-    fontWeight: "700",
-    marginBottom: 8
+    color: "#7C00A2",
+    fontSize: 28,
+    fontWeight: "800",
+    marginBottom: 6
   },
-  text: {
-    fontSize: 15,
-    textAlign: "center",
-    marginBottom: 20
+  subtext: {
+    color: "#cfcfcf",
+    marginTop: 6,
+    marginBottom: 12
+  },
+  packCard: {
+    backgroundColor: "#1D1D1D",
+    paddingVertical: 18,
+    paddingHorizontal: 16,
+    borderRadius: 12,
+    marginVertical: 10,
+    width: "100%",
+  },
+  packTitle: {
+    color: "#ffffff",
+    fontSize: 20,
+    fontWeight: "800"
+  },
+  packCount: {
+    color: "#ffffff",
+    marginTop: 6
   },
 });

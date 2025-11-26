@@ -47,18 +47,48 @@ export default function TaskManager() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    padding: 16
+    backgroundColor: "#000000"
+  },
+  scroll: {
+    padding: 20
   },
   header: {
-    fontSize: 24,
+    color: "#7C00A2",
+    fontSize: 28,
+    fontWeight: "800",
+    marginBottom: 6
+  },
+  dayLabel: {
+    color: "#ffffff",
     fontWeight: "700",
+    marginTop: 10,
     marginBottom: 8
   },
-  text: {
-    fontSize: 15,
-    textAlign: "center",
-    marginBottom: 20
+  taskCard: {
+    backgroundColor: "#1D1D1D",
+    padding: 14,
+    borderRadius: 10,
+    marginVertical: 8,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+  },
+  taskTitle: {
+    color: "#fff",
+    fontSize: 16,
+    fontWeight: "700",
+    flex: 1,
+    marginRight: 12
+  },
+  statusCircle: {
+    width: 22,
+    height: 22,
+    borderRadius: 11
+  },
+  green: {
+    backgroundColor: "#12ca57"
+  },
+  red: {
+    backgroundColor: "#d93838"
   },
 });
