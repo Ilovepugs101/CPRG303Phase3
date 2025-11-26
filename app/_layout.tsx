@@ -12,7 +12,7 @@ export default function Layout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarStyle: { backgroundColor: "#000000", height: 60 },
+        tabBarStyle: { backgroundColor: "#000000", height: 60, borderColor: "#7C00A2" },
         tabBarActiveTintColor: "#7C00A2",
         tabBarInactiveTintColor: "#FFFFFF",
         headerShown: false,
@@ -22,7 +22,7 @@ export default function Layout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: "Home",
+          tabBarLabel: "Home",
           tabBarIcon: ({ color, size }) => (
             <AntDesign name="home" size={size ?? 24} color={color} />
           ),
