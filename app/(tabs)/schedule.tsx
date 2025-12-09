@@ -1,8 +1,8 @@
 // app/schedule.tsx
 // Schedule screen stub for the mock-up
 
-import React, { useState } from "react";
-import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Dimensions} from "react-native";
+import { useState } from "react";
+import { Dimensions, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 const { width } = Dimensions.get("window");
 
@@ -71,9 +71,6 @@ export default function Schedule() {
         <View style={styles.tasksSection}>
           <View style={styles.tasksHeaderRow}>
             <Text style={styles.tasksTitle}>Tasks</Text>
-            <View style={styles.plusButton}>
-              <Text style={styles.plusText}>+</Text>
-            </View>
           </View>
 
           {/* list tasks for chosen day (static mock) */}
