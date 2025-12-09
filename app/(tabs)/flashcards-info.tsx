@@ -1,6 +1,6 @@
 // app/flashcards-info.tsx
 import React, { useState, useMemo } from "react";
-import { View, Text, StyleSheet, TouchableOpacity, Dimensions } from "react-native";
+import { View, Text, ScrollView, StyleSheet, TouchableOpacity, Dimensions } from "react-native";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 
@@ -27,6 +27,7 @@ export default function FlashcardsInfo() {
 
   return (
     <View style={styles.screen}>
+    <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
       <Text style={[styles.title, { fontSize: width * 0.11 }]}>{title}</Text>
 
       <View style={styles.cardContainer}>
@@ -47,6 +48,7 @@ export default function FlashcardsInfo() {
       <TouchableOpacity style={styles.backButton} onPress={() => router.back()}>
         <Text style={styles.backText}>Back</Text>
       </TouchableOpacity>
+      </ScrollView>
     </View>
   );
 }
@@ -58,6 +60,10 @@ const styles = StyleSheet.create({
         paddingHorizontal: "5%",
         paddingTop: "6%"
     },
+    scroll: {
+    paddingHorizontal: "5%",
+    paddingTop: "6%"
+  },
   title: {
     color: "#7C00A2",
     fontWeight: "800",
