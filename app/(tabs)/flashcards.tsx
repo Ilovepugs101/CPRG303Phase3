@@ -2,14 +2,18 @@
 // Flashcards study screen stub
 
 import React from "react";
-import { View, Text, StyleSheet, ScrollView } from "react-native";
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Dimensions } from "react-native";
+import { useRouter } from "expo-router";
 
 export default function Flashcards() {
+  const router = useRouter();
   const packs = [
-    { title: "Math 30-1", count: 67 },
-    { title: "ELA 30-1", count: 67 },
-    { title: "Social Studies 30-1", count: 67 },
+    { id: "math-30-1", title: "Math 30-1", count: 67 },
+    { id: "ela-30-1", title: "ELA 30-1", count: 67 },
+    { id: "social-30-1", title: "Social Studies 30-1", count: 67 },
   ];
+
+  const { width } = Dimensions.get("window");
 
   return (
     <View style={styles.container}>
@@ -18,10 +22,15 @@ export default function Flashcards() {
         <Text style={styles.subtext}>What Packs of cards would you pick today?</Text>
 
         {packs.map((p, i) => (
-          <View key={i} style={styles.packCard}>
+          <TouchableOpacity
+            key={p.id}
+            style={styles.packCard}
+            activeOpacity={0.8}
+            onPress={() => router.push({ pathname: "/flashcards-info", params: { packId: p.id, title: p.title } })}
+          >
             <Text style={styles.packTitle}>{p.title}</Text>
             <Text style={styles.packCount}>{p.count} Cards</Text>
-          </View>
+          </TouchableOpacity>
         ))}
 
         <View style={{ height: 90 }} />
